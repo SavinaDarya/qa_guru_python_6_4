@@ -5,6 +5,7 @@ def test_greeting():
 
     output = f"Привет, {name}! Тебе {age} лет."
     assert output == "Привет, Анна! Тебе 25 лет."
+    print(output)
 
 
 def test_rectangle():
@@ -24,14 +25,16 @@ def test_circle():
 
     area = math.pi * r ** 2
     assert area == 1661.9025137490005
+    print(area)
 
     length = (math.pi * r) * 2
     assert length == 144.51326206513048
-
+    print(length)
 
 def test_random_list():
+    import random
 
-    l = [12,56,34,23,90,45,99,65,54,23]
+    l = random.sample(range(1, 101), 10)
     l.sort()
     assert len(l) == 10
     assert l[0] < l[-1]
@@ -63,3 +66,4 @@ def test_dicts():
 
     assert isinstance(d, dict)
     assert len(d) == 5
+    print(d)
